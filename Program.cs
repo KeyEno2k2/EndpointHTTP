@@ -44,8 +44,46 @@ app.MapPost("/api/v1/parse-content", async (HttpRequest request) =>
             message = "Nie przesłano danych"
         });
     }
-}
-);
+
+    if (string.IsNullOrWhiteSpace(body.Content))
+    {
+        return Results.BadRequest(new
+        {
+            status = "error",
+            message = "Pole 'Content' nie może być puste."
+        });
+    }
+
+    //Sprawdzanie obsługiwanych typów
+    if (!Enum.TryParse<ContentType>(
+        body.Type,
+        ignoreCase: true,
+        out var contentType))
+        {
+            return Results.BadRequest(new
+            {
+                status = "error",
+                message = "Nieobsługiwany typ. Dozwolone typy to: CSV, INTERNAL_JSON."
+            });
+        }
+
+    //Dekodowanie Base64
+    string decodedContent;
+        try
+        {
+            byte[] decodedBytes = Convert.FromBase64String(body.Content);
+            decodedContent = Encoding.UTF8.GetString(decodedBytes);
+        }
+        catch (FormatException)
+        {
+        return Results.BadRequest(new
+        {
+            status = "error",
+            message = "Pole COntent nie zawiera poprawnych danych Base64"
+        });
+        }
+});
+
 
 enum ContentType
 {
