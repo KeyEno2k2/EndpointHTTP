@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("EndpointHTTPProject")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("EndpointHTTP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b92beb4c1286741c4d56462c2f6bb459e89f4dbe")]
-[assembly: System.Reflection.AssemblyProductAttribute("EndpointHTTPProject")]
-[assembly: System.Reflection.AssemblyTitleAttribute("EndpointHTTPProject")]
+[assembly: System.Reflection.AssemblyProductAttribute("EndpointHTTP")]
+[assembly: System.Reflection.AssemblyTitleAttribute("EndpointHTTP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Wygenerowane przez klasę WriteCodeFragment programu MSBuild.

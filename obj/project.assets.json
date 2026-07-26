@@ -80,9 +80,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/igor/Desktop/Projekty/VSC/EndpointHTTP/EndpointHTTPProject.csproj",
-      "projectName": "EndpointHTTPProject",
-      "projectPath": "/Users/igor/Desktop/Projekty/VSC/EndpointHTTP/EndpointHTTPProject.csproj",
+      "projectUniqueName": "/Users/igor/Desktop/Projekty/VSC/EndpointHTTP/EndpointHTTP.csproj",
+      "projectName": "EndpointHTTP",
+      "projectPath": "/Users/igor/Desktop/Projekty/VSC/EndpointHTTP/EndpointHTTP.csproj",
       "packagesPath": "/Users/igor/.nuget/packages/",
       "outputPath": "/Users/igor/Desktop/Projekty/VSC/EndpointHTTP/obj/",
       "projectStyle": "PackageReference",

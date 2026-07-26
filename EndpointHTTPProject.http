@@ -1,6 +1,0 @@
-@EndpointHTTPProject_HostAddress = http://localhost:5195
-
-GET {{EndpointHTTPProject_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
