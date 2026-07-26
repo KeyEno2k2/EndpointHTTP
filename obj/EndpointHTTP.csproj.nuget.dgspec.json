@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/igor/Desktop/Projekty/VSC/EndpointHTTP/EndpointHTTP.csproj": {}
+    "D:\\Projekty\\EndpointHTTP\\EndpointHTTP.csproj": {}
   },
   "projects": {
-    "/Users/igor/Desktop/Projekty/VSC/EndpointHTTP/EndpointHTTP.csproj": {
+    "D:\\Projekty\\EndpointHTTP\\EndpointHTTP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/igor/Desktop/Projekty/VSC/EndpointHTTP/EndpointHTTP.csproj",
+        "projectUniqueName": "D:\\Projekty\\EndpointHTTP\\EndpointHTTP.csproj",
         "projectName": "EndpointHTTP",
-        "projectPath": "/Users/igor/Desktop/Projekty/VSC/EndpointHTTP/EndpointHTTP.csproj",
-        "packagesPath": "/Users/igor/.nuget/packages/",
-        "outputPath": "/Users/igor/Desktop/Projekty/VSC/EndpointHTTP/obj/",
+        "projectPath": "D:\\Projekty\\EndpointHTTP\\EndpointHTTP.csproj",
+        "packagesPath": "C:\\Users\\mojme\\.nuget\\packages\\",
+        "outputPath": "D:\\Projekty\\EndpointHTTP\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/igor/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\mojme\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -38,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -60,6 +60,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.11, 9.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[9.0.11, 9.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[9.0.11, 9.0.11]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[9.0.11, 9.0.11]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -68,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
