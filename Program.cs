@@ -84,7 +84,16 @@ app.MapPost("/api/v1/parse-content", async (HttpRequest request) =>
         }
 
 
+    //Parsowanie zależne od typu
+    if (contentType == ContentType.CSV)
+    {
+        return ParseCsv(decodedContent);
+    }
+
+    return ParseInternalJson(decodedContent);
 });
+
+app.Run();
 
 static IResult ParseCsv(string csvContent)
 {
