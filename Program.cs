@@ -2,9 +2,16 @@ using System.Text;
 using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
+// builder.Services.AddOpenApi();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
-app.MapPost("/api/v1/parse-content", async (HttpRequest request) =>
+var app = builder.Build();
+// app.MapOpenApi();
+app.UseSwagger();
+app.UseSwaggerUI();
+
+app.MapPost("/api/v1/parse-content", async (HttpRequest request, ParseContentRequest body) =>
 {
     // Sprawdzenie nagłówka Content-Type
     if (!request.HasJsonContentType())
@@ -16,23 +23,6 @@ app.MapPost("/api/v1/parse-content", async (HttpRequest request) =>
                 message = "Content-Type musi mieć wartość application/json."
             },
             statusCode: StatusCodes.Status415UnsupportedMediaType
-        );
-    }
-    ParseContentRequest? body;
-
-    try
-    {
-        body = await request.ReadFromJsonAsync<ParseContentRequest>();
-    }
-    catch (JsonException)
-    {
-        return Results.Json(
-            new
-            {
-                status = "error",
-                message = "Nieprawidłowy format JSON."
-            },
-            statusCode: StatusCodes.Status400BadRequest
         );
     }
 
